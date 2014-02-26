@@ -17,10 +17,24 @@
 // When the user clicks the marker, an info window opens.
 
 function initialize() {
+	
+	var custom = [
+		{
+			"featureType": "water",
+			"stylers": [
+				{
+					"color": "#37a38b"
+				}
+			]
+		}
+	]
+	
+	
   var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
   var mapOptions = {
     zoom: 4,
-    center: myLatlng
+    center: myLatlng,
+	styles: custom
   };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
